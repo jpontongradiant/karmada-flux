@@ -1,3 +1,4 @@
 resources:
+  - fog-namespace.yaml
   - fog-nginx-deployment.yaml
   - fog-nginx-service.yaml

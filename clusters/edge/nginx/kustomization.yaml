@@ -1,3 +1,4 @@
 resources:
+  - edge-namespace.yaml
   - edge-nginx-deployment.yaml
   - edge-nginx-service.yaml

@@ -1,3 +1,4 @@
 resources:
+  - cloud-namespace.yaml
   - cloud-nginx-deployment.yaml
   - cloud-nginx-service.yaml
