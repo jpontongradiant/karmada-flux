@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-nginx-deployment
+  labels:
+    app: edge-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edge-nginx
+  template:
+    metadata:
+      labels:
+        app: edge-nginx
+    spec:
+      containers:
+      - name: edge-nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80

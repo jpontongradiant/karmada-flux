@@ -1,0 +1,3 @@
+resources:
+  - fog-nginx-deployment.yaml
+  - fog-nginx-service.yaml

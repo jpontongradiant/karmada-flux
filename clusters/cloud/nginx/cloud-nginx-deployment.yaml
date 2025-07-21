@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloud-nginx-deployment
+  labels:
+    app: cloud-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloud-nginx
+  template:
+    metadata:
+      labels:
+        app: cloud-nginx
+    spec:
+      containers:
+      - name: cloud-nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80

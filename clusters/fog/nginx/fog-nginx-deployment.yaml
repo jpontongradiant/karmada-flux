@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fog-nginx-deployment
+  labels:
+    app: fog-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fog-nginx
+  template:
+    metadata:
+      labels:
+        app: fog-nginx
+    spec:
+      containers:
+      - name: fog-nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
