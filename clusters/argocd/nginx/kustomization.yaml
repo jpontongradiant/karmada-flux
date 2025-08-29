@@ -2,7 +2,3 @@ resources:
   - argocd-namespace.yaml
   - argocd-nginx-deployment.yaml
   - argocd-nginx-service.yaml
-labels:
-  - pairs:
-      app.kubernetes.io/argocd-instance: "argocd-labels-app"
-    includeSelectors: true
