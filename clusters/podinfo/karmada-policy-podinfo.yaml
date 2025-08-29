@@ -1,0 +1,17 @@
+apiVersion: policy.karmada.io/v1alpha1
+kind: PropagationPolicy
+metadata:
+  name: podinfo-propagate-to-cloud
+  namespace: podinfo
+spec:
+  resourceSelectors:
+    - apiVersion: '*' # Cualquier versión de API
+      kind: '*'       # Cualquier tipo de recurso
+      labelSelector:
+        matchLabels:
+          app: podinfo
+  placement:
+    clusterAffinity:
+      labelSelector:
+        matchLabels:
+          type: cloud
