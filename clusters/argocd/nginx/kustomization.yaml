@@ -2,3 +2,11 @@ resources:
   - argocd-namespace.yaml
   - argocd-nginx-deployment.yaml
   - argocd-nginx-service.yaml
+commonLabels:
+  app.kubernetes.io/argocd-instance: "argocd-labels-app"
+patches:
+  - target:
+      kind: Namespace
+      name: argocd-nginx
+    patch: |-
+      $patch: delete
