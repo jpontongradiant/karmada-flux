@@ -1,0 +1,4 @@
+resources:
+  - argocd-namespace.yaml
+  - argocd-nginx-deployment.yaml
+  - argocd-nginx-service.yaml
