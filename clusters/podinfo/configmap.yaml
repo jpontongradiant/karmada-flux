@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: podinfo-config
+  namespace: podinfo
+  labels:
+    app: podinfo
+data:
+  PODINFO_UI_MESSAGE: "¡Hola desde el clúster Cloud!"
