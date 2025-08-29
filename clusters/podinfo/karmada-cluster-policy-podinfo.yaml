@@ -1,0 +1,21 @@
+# apps/podinfo/karmada-cluster-policy-podinfo.yaml
+
+apiVersion: policy.karmada.io/v1alpha1
+kind: ClusterPropagationPolicy
+metadata:
+  # Ya no hay 'namespace' aquí
+  name: podinfo-propagate-to-cloud-clusterwide
+spec:
+  resourceSelectors:
+  - apiVersion: '*'
+    kind: '*'
+    # ¡Importante! Aquí sí especificamos el namespace porque es una política de clúster
+    namespace: podinfo
+    labelSelector:
+      matchLabels:
+        app: podinfo
+  placement:
+    clusterAffinity:
+      labelSelector:
+        matchLabels:
+          type: cloud
