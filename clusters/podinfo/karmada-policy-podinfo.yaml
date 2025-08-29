@@ -5,11 +5,11 @@ metadata:
   namespace: podinfo
 spec:
   resourceSelectors:
-    - apiVersion: '*' # Cualquier versión de API
-      kind: '*'       # Cualquier tipo de recurso
-      labelSelector:
-        matchLabels:
-          app: podinfo
+  - apiVersion: '*'
+    kind: '*'
+    labelSelector:
+      matchLabels:
+        app: podinfo
   placement:
     clusterAffinity:
       labelSelector:
