@@ -6,6 +6,3 @@ labels:
   - pairs:
       app.kubernetes.io/argocd-instance: "argocd-labels-app"
     includeSelectors: true
-    resources:
-      - argocd-nginx-deployment.yaml
-      - argocd-nginx-service.yaml
